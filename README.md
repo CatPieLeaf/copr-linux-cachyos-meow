@@ -1,11 +1,30 @@
 <div align="center">
   <img src="https://github.com/CachyOS/calamares-config/blob/grub-3.2/etc/calamares/branding/cachyos/logo.png" width="64" alt="CachyOS logo"></img>
   <br/>
-  <h1 align="center">CachyOS COPR Repository for Fedora</h1>
-  <p align="center">Goodies from CachyOS ported to Fedora.</p>
+  <h1 align="center">CachyOS MEOW for Fedora</h1>
+  <p align="center">My personal changes to CachyOS kernel for Fedora</p>
 </div>
 
-This repository is maintained by [@andersrh](https://github.com/andersrh) and [@TrixieUA](https://github.com/TrixieUA).
+This repository contains some changes from https://github.com/LFRon/Fedora-CachyOS-Patch-Kernel.
+
+The `kernel-cachyos-lto-meow` spec file is specifically made for Alder Lake CPUs with NVIDIA GPUs with **Enabled Secureboot**.
+
+Meant for my own personal usage. If anyone wants to compile and use it, enjoy!
+
+# Features
+- Kernel v7.0.0+
+- FULL LTO
+- x86-x64 v3
+- march alderlake, mtune alderlake
+- O3 Optimizations
+- NVIDIA-Open Beta
+- Rust experiments
+- BBRv3 by default
+- LRU_GEN
+- Automatically signed for Secureboot
+- POLLY Clang
+
+---
 
 - [Kernels](#-kernels)
   - [Features](#-features)
