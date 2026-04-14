@@ -1,6 +1,7 @@
 %global _default_patch_fuzz 2
-%global commitdate 20260325
-%global commit 25925896d670070b5f1b69550bf7fabbc3ed723f
+%global commitdate 20260410
+%global commit 37bf708cfb53a58fa90cecefe08dca0349aaca61
+%global revision 2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
@@ -10,7 +11,7 @@
 %endif
 
 Name:           scx-scheds-git
-Version:        1.1.0.%{commitdate}.git.%{shortcommit}
+Version:        1.1.0.%{commitdate}.%{revision}.git.%{shortcommit}
 Release:        1%{?dist}
 Summary:        Sched_ext Schedulers and Tools
 
@@ -68,7 +69,6 @@ cargo build \
      --workspace \
      --exclude scx_rlfifo \
      --exclude scx_mitosis \
-     --exclude scx_wd40 \
      --exclude xtask \
      --exclude scxcash \
      --exclude vmlinux_docify \
