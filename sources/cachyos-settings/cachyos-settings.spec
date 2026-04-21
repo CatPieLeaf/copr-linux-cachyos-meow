@@ -3,7 +3,7 @@
 
 Name:           cachyos-settings
 Release:        1%{?dist}
-Version:        1.3.1
+Version:        1.3.4
 Summary:        CachyOS-Settings ported to Fedora
 License:        GPL-3.0-or-later
 URL:            https://github.com/CachyOS/CachyOS-Settings
@@ -30,14 +30,20 @@ Obsoletes:      bore-sysctl
 %if 0%{?rhel}
     rm -f %{buildroot}/%{_prefix}/lib/NetworkManager/conf.d/dns.conf
 %endif
+    # Rename conflicting sbctl-batch-sign to avoid conflict with Fedora sbctl package
+    if [ -f %{buildroot}/%{_bindir}/sbctl-batch-sign ]; then
+        mv %{buildroot}/%{_bindir}/sbctl-batch-sign %{buildroot}/%{_bindir}/sbctl-batch-sign-cachyos
+    fi
     chmod +x %{buildroot}/%{_bindir}/*
 
 %files
+    %{_bindir}/sbctl-batch-sign-cachyos
     %{_bindir}/*
     %{_prefix}/lib/*
 
 %changelog
 %autochangelog
+
 
 
 
