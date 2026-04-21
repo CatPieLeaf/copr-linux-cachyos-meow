@@ -185,7 +185,7 @@ Patch1: %{_patch_src}/misc/0001-clang-polly.patch
 Patch2: %{_patch_src}/misc/dkms-clang.patch
 %endif
 
-Patch3: %{_patch_src}/sched-dev/0001-bore-cachy.patch
+Patch3: %{_patch_src}/sched/0001-bore-cachy.patch
 Patch4: %{_patch_src}/0002-bbr3.patch
 Patch5: %{_patch_src}/misc/0001-acpi-call.patch
 
@@ -309,6 +309,7 @@ Patch5: %{_patch_src}/misc/0001-acpi-call.patch
     scripts/config -e INTEL_PSTATE
     scripts/config -e INTEL_TCC_COOLING
     scripts/config -e SCHED_MC_PRIO
+    scripts/config -e CONFIG_MALDERLAKE
     %endif
 
     # --- Hardware: ASUS TUF Gaming ---
